@@ -55,7 +55,7 @@ import threading
 import requests
 from contextlib import contextmanager
 from selenium import webdriver
-from app.ereignisse_abruf import lade_oder_erstelle_ereignisse, bewerte_ampel_3
+from ereignisse_abruf import lade_oder_erstelle_ereignisse, bewerte_ampel_3
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
