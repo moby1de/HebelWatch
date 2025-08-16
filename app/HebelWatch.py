@@ -1048,5 +1048,6 @@ if __name__ == "__main__":
     start_update_thread()
     if os.getenv("OPEN_BROWSER", "1") == "1":
         threading.Timer(0.8, lambda: webbrowser.open("http://127.0.0.1:8050")).start()
-    app.run(host="0.0.0.0", port=8050, debug=True)   # statt app.run_server(...)
+    app.run(host="0.0.0.0", port=8050, debug=True)
+
 
