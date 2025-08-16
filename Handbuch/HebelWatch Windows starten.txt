@@ -1,0 +1,8 @@
+Im Ordner C:\Users\marku\Downloads\HebelWatch\dist liegt eine exe. 
+Doppelklick. 
+
+Dann startet der Webbrowser (empfohlen Firefox).
+
+
+Funktionen werden am besten über https://chatgpt.com  erklärt.
+Einfach HebelWatch.py hochladen und Fragen stellen

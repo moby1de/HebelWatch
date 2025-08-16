@@ -1,0 +1,30 @@
+Ziel:
+- Programm welches als HebelWatch.py vorliegt in eine exe zu verwandeln
+
+
+
+dateimanager öffnen, oben PowerShell eingeben (Adresszeile)
+
+# 1) Konsole-EXE (zum Sichtbar-Machen von Fehlern)
+Remove-Item .\HebelWatch.spec -ErrorAction Ignore
+
+pyinstaller --onefile --windowed --name=HebelWatch --clean --noconfirm --noupx `
+  --add-data "assets;assets" `
+  HebelWatch.py
+
+
+.\dist\HebelWatch.exe
+
+
+
+
+# 2) Wenn das läuft → GUI-EXE (ohne Konsole)
+
+Remove-Item .\HebelWatch.spec -ErrorAction Ignore
+
+
+pyinstaller --onefile --windowed --name=HebelWatch --clean --noconfirm --noupx `
+  --add-data "assets;assets" `
+  HebelWatch.py
+
+.\dist\HebelWatch.exe

@@ -1,0 +1,53 @@
+In ordner des Programms wechseln
+markus@fedora:~$ cd HebelWatch/
+
+Programm/Dateiname eingeben
+
+markus@fedora:~/HebelWatch$ python HebelWatch.py 
+/es werden fehlende Module angezeigt, bestätigen/
+
+⚠️ Fehlende Module erkannt:
+ - pandas
+ - dash
+ - selenium
+ - webdriver-manager
+ - yfinance
+
+Bitte installiere sie mit:
+pip install pandas dash selenium webdriver-manager yfinance
+
+markus@fedora:~/HebelWatchV25$ pip install pandas dash selenium webdriver-manager yfinance
+bash: pip: Befehl nicht gefunden...
+Soll das Paket »python3-pip« installiert werden, welches den Befehl »pip« bereitstellt? [N/y] y
+
+
+ * Warten in Warteschlange... 
+ * Paketliste wird geladen.... 
+Die folgenden Pakete müssen installiert werden:
+ python3-pip-24.3.1-2.fc42.noarch	A tool for installing and managing Python3 packages
+Mit Änderungen fortfahren? [N/y] y
+
+/Neuer Versuch: jetzt fehlt noch Chrome/
+
+markus@fedora:~/HebelWatch$ python HebelWatch.py 
+
+Versuche Daten von OnVista URL abzurufen: https://www.onvista.de/derivate/Knock-Outs/Knock-Outs-auf-DAX?customerId=7&customerIntegrationOrigin=derivative&customerIntegrationType=QUICKLINKS_DERIVATIVES&customerName=UBS&idExerciseRight=2&idIssuer=53163&idIssuerIntegration=53163
+Dash is running on http://0.0.0.0:8050/
+
+ * Serving Flask app 'HebelWatch_Dax_Sp500_V26'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8050
+ * Running on http://192.168.102.35:8050
+Press CTRL+C to quit
+Fehler bei OnVista-Abfrage: Message: unknown error: cannot find Chrome binary
+
+root@fedora:/home/markus# dnf install google-chrome-stable
+root@fedora:/home/markus# google-chrome --version
+Google Chrome 139.0.7258.66 
+
+root@fedora:/home/markus# pip install --upgrade selenium webdriver-manager
+
+
+

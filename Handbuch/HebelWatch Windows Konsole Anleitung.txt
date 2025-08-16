@@ -1,0 +1,51 @@
+- Google Chrome installieren
+
+Den Pfad der Python-Datei finden
+- speichere deine Datei am besten im Ordner Downloads
+C:\Users\markus\Downloads
+
+
+
+
+-Das Startmenü einblenden.
+
+Suche nach Kommandozeile. Tippe dafür cmd ein. Öffne die Kommandozeile
+
+
+Wechsle in das Verzeichnis deiner Python-Datei. Tippe cd und ein Leerzeichen  Drücke auf ↵ Enter.
+
+cd C:\Users\markus\Downloads
+
+
+Gib den "python" Befehl und den Namen deiner Python-Datei ein. 
+
+python HebelWatch.py  (falls noch kein python installiert ist, wird das Windows jetzt anbieten)
+
+
+FEHLER: jetzt kommt eine Fehlermeldung, die darauf hinweist welche Module installiert sein müssen
+
+⚠️ Fehlende Module erkannt:
+ - pandas
+ - dash
+ - selenium
+ - webdriver-manager
+ - yfinance
+
+das eingeben was dran steht:
+pip install pandas dash selenium webdriver-manager yfinance lxml
+
+nochmal probieren:
+
+python HebelWatch.py
+
+
+Jetzt läuft dein Programm.
+für Anzeige im Webbrowser untere Adresse eingeben:
+
+Running on http://127.0.0.1:8050
+
+
+
+
+Sonstiges: Einsteiger Anleitung, Python Programm starten
+https://de.wikihow.com/Mit-der-Windows-Kommandozeile-eine-Python-Datei-ausf%C3%BChren

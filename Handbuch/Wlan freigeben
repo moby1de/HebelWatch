@@ -1,0 +1,89 @@
+Frag chatgpt:
+
+
+
+🔹 Methode 1: Port-Forwarding im Router (ohne Drittanbieter)
+
+Schritte:
+
+    Lokale IP Ihres PCs ermitteln (z. B. 192.168.1.100 via ipconfig/ifconfig).
+
+    Router-Konfiguration öffnen (meist http://192.168.1.1 im Browser).
+
+    Port-Weiterleitung (Port Forwarding) einrichten:
+
+        Externer Port: 8050 (oder ein anderer freier Port).
+
+        Interne IP: Lokale IP Ihres PCs (z. B. 192.168.1.100).
+
+        Protokoll: TCP.
+
+    Externe IP Ihres Routers herausfinden (z. B. über whatismyip.com).
+
+    Im Browser aufrufen:
+
+http://<EXTERNE-ROUTER-IP>:8050
+
+⚠️ Achtung:
+
+    Ihr PC muss eingeschaltet sein.
+
+    Manche ISPs blockieren Standardports (z. B. 80, 443). Nutzen Sie stattdessen 8080 oder 5000.
+    
+    
+    
+    LINUX:
+    
+    
+   🔹 1. Prüfen, ob der Server korrekt läuft
+
+    Terminal-Befehl:
+    
+
+ss -tulnp | grep 8050
+
+    Erwartete Ausgabe:
+
+tcp   LISTEN 0 128  0.0.0.0:8050  0.0.0.0:*  users:(("python",pid=1234,fd=3))
+
+Falls nichts angezeigt wird:
+
+    Starten Sie das Programm neu mit host='0.0.0.0':
+    python
+
+            if __name__ == '__main__':
+                app.run(host='0.0.0.0', port=8050, debug=True)
+
+🔹 2. Firewall (UFW) auf Linux überprüfen
+
+    Firewall-Status prüfen:
+    sh
+
+sudo ufw status
+
+Port 8050 freigeben:
+sh
+
+sudo ufw allow 8050/tcp
+
+Firewall neu laden:
+sh
+
+    sudo ufw reload
+
+🔹 3. Lokale IP-Adresse bestätigen
+
+    Befehl:
+    sh
+
+hostname -I
+
+    Beispielausgabe:
+
+192.168.1.100
+
+Im Browser aufrufen:
+
+        http://192.168.1.100:8050
+
+

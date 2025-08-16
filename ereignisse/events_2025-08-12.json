@@ -1,0 +1,80 @@
+[
+  {
+    "datum": "2025-03-21",
+    "typ": "Hexensabbat",
+    "text": "Großer Verfallstag (Hexensabbat)",
+    "index": "ALL"
+  },
+  {
+    "datum": "2025-06-20",
+    "typ": "Hexensabbat",
+    "text": "Großer Verfallstag (Hexensabbat)",
+    "index": "ALL"
+  },
+  {
+    "datum": "2025-09-19",
+    "typ": "Hexensabbat",
+    "text": "Großer Verfallstag (Hexensabbat)",
+    "index": "ALL"
+  },
+  {
+    "datum": "2025-12-19",
+    "typ": "Hexensabbat",
+    "text": "Großer Verfallstag (Hexensabbat)",
+    "index": "ALL"
+  },
+  {
+    "datum": "2025-03-24",
+    "typ": "Rebalancing",
+    "text": "DAX/MDAX-Rebalancing (heuristisch)",
+    "index": "DAX"
+  },
+  {
+    "datum": "2025-06-23",
+    "typ": "Rebalancing",
+    "text": "DAX/MDAX-Rebalancing (heuristisch)",
+    "index": "DAX"
+  },
+  {
+    "datum": "2025-09-22",
+    "typ": "Rebalancing",
+    "text": "DAX/MDAX-Rebalancing (heuristisch)",
+    "index": "DAX"
+  },
+  {
+    "datum": "2025-12-22",
+    "typ": "Rebalancing",
+    "text": "DAX/MDAX-Rebalancing (heuristisch)",
+    "index": "DAX"
+  },
+  {
+    "datum": "2025-08-12",
+    "typ": "CPI",
+    "text": "US Verbraucherpreise (CPI)",
+    "index": "SP500"
+  },
+  {
+    "datum": "2025-09-11",
+    "typ": "CPI",
+    "text": "US Verbraucherpreise (CPI)",
+    "index": "SP500"
+  },
+  {
+    "datum": "2025-10-15",
+    "typ": "CPI",
+    "text": "US Verbraucherpreise (CPI)",
+    "index": "SP500"
+  },
+  {
+    "datum": "2025-11-13",
+    "typ": "CPI",
+    "text": "US Verbraucherpreise (CPI)",
+    "index": "SP500"
+  },
+  {
+    "datum": "2025-12-10",
+    "typ": "CPI",
+    "text": "US Verbraucherpreise (CPI)",
+    "index": "SP500"
+  }
+]
