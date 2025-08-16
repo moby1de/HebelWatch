@@ -1,0 +1,13 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+.vscode
+.venv
+.idea
+.git
+.gitignore
+node_modules
+CSV/                 # Laufzeitdaten nicht ins Image

@@ -1,0 +1,18 @@
+# Dash/Plot
+dash==2.*
+plotly==5.*
+
+# Daten/Utils
+pandas==2.*
+numpy==1.*
+requests==2.*
+pytz==2024.*
+yfinance==0.*
+
+# Scraping
+beautifulsoup4==4.*
+lxml==5.*
+selenium==4.*
+
+# Server
+gunicorn==22.*

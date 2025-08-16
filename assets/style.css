@@ -1,0 +1,69 @@
+/* System-Font-Stack mit Fokus auf Windows */
+:root{
+  --app-font: "Segoe UI", "Segoe UI Variable", Roboto, "Helvetica Neue", Arial,
+              "Noto Sans", "Liberation Sans", system-ui, -apple-system, sans-serif;
+  --mono-font: ui-monospace, "Cascadia Code", Consolas, "SFMono-Regular",
+               "Liberation Mono", Menlo, monospace;
+}
+
+html, body, #react-entry-point {
+  height: 100%;
+  font-family: var(--app-font);
+  /* leichte Glättung */
+  -webkit-font-smoothing: antialiased;   /* wirkt v.a. auf macOS */
+  -moz-osx-font-smoothing: grayscale;    /* wirkt v.a. auf macOS */
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: .2px;
+  margin-top: .2rem;
+  margin-bottom: .6rem;
+}
+
+button, .dash-dropdown, .Select-control, .Select-menu-outer,
+.dash-table-container, .dash-table, .dash-table * {
+  font-family: var(--app-font);
+}
+
+/* Wichtig: Plotly-SVGs auch auf Segoe umstellen */
+.dash-graph .main-svg, .dash-graph .main-svg * {
+  font-family: var(--app-font) !important;
+  font-weight: 400;
+}
+
+/* optional: leicht mehr Kontrast */
+body { color: #1a1a1a; }
+
+/* assets/style.css */
+
+/* Cross-Platform Font-Stack: Windows → Segoe, Linux → Noto/DejaVu, macOS → system-ui */
+:root{
+  --app-font: "Segoe UI", "Segoe UI Variable", Roboto, "Helvetica Neue", Arial,
+              "Noto Sans", "Liberation Sans", "DejaVu Sans",
+              system-ui, -apple-system, sans-serif;
+  --mono-font: ui-monospace, "Cascadia Code", Consolas, "DejaVu Sans Mono",
+               "Liberation Mono", Menlo, monospace;
+}
+
+html, body, #react-entry-point {
+  height: 100%;
+  font-family: var(--app-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.dash-table, .dash-table * ,
+.dash-dropdown, .Select-control, .Select-menu-outer,
+button, input, textarea {
+  font-family: var(--app-font);
+}
+
+/* Wichtig: Plotly-SVGs auch auf denselben Font zwingen */
+.dash-graph .main-svg, .dash-graph .main-svg * {
+  font-family: var(--app-font) !important;
+}
+
+
