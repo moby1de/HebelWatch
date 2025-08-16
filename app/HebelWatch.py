@@ -70,6 +70,19 @@ import pytz
 from datetime import datetime
 import plotly.io as pio
 from threading import Lock
+from webdriver_manager.chrome import ChromeDriverManager
+
+def build_driver():
+    opts = Options()
+    opts.add_argument("--headless=new")
+    opts.add_argument("--no-sandbox")
+    opts.add_argument("--disable-dev-shm-usage")
+    opts.add_argument("--disable-gpu")
+    opts.add_argument("--window-size=1920,1080")
+
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=opts)
+    return driver
 
 _SOUND_ENABLED = True
 _SOUND_LOCK = Lock()
@@ -813,7 +826,7 @@ def update_volatility_label(selected_underlying):
 def update_graph(n, selected, volatility_toggle, sound_value):
     global selected_underlying, last_fetch_time, show_volatility, _last_alarm_state
     if (update_thread is None) or (not update_thread.is_alive()):
-    start_update_thread()
+        start_update_thread()
 
     # Sound-Schalter übernehmen
     sound_on = bool(sound_value) and ("on" in sound_value)
@@ -1035,4 +1048,5 @@ if __name__ == "__main__":
     start_update_thread()
     if os.getenv("OPEN_BROWSER", "1") == "1":
         threading.Timer(0.8, lambda: webbrowser.open("http://127.0.0.1:8050")).start()
-    app.run_server(host="0.0.0.0", port=8050, debug=True)
+    app.run(host="0.0.0.0", port=8050, debug=True)   # statt app.run_server(...)
+

@@ -16,3 +16,6 @@ selenium==4.*
 
 # Server
 gunicorn==22.*
+webdriver-manager
+selenium
+
