@@ -103,6 +103,7 @@ pio.templates.default = "hebelwatch+plotly_white"
 
 # Initialize the app
 app = Dash(__name__)
+server = app.server
 
 # -----------------------------------------------
 # Konfiguration / Konstanten
